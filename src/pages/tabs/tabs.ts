@@ -3,7 +3,6 @@ import { Component } from '@angular/core';
 import { FocusPage } from '../focus/focus';
 import { DiscoveryPage } from '../discovery/discovery';
 import { WritePage } from '../write/write';
-import { HomePage } from '../home/home';
 import { MsgPage } from '../msg/msg';
 import { MePage } from '../me/me';
 

@@ -2656,9 +2656,9 @@ type-is@~1.6.13:
     media-typer "0.3.0"
     mime-types "~2.1.13"
 
-typescript@2.0.9:
-  version "2.0.9"
-  resolved "http://registry.npm.taobao.org/typescript/download/typescript-2.0.9.tgz#b4f5fecc3f44d5c717f3b3e7c331e5bbb147a53d"
+typescript@^2.1.5:
+  version "2.1.5"
+  resolved "http://registry.npm.taobao.org/typescript/download/typescript-2.1.5.tgz#6fe9479e00e01855247cea216e7561bafcdbcd4a"
 
 uglify-js@2.7.3:
   version "2.7.3"

@@ -5,7 +5,6 @@ import { FocusPage } from '../pages/focus/focus';
 import { DiscoveryPage } from '../pages/discovery/discovery';
 import { WritePage } from '../pages/write/write';
 import { MsgPage } from '../pages/msg/msg';
-import { AboutPage } from '../pages/about/about';
 import { MePage } from '../pages/me/me';
 // import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
@@ -16,7 +15,6 @@ import { TabsPage } from '../pages/tabs/tabs';
     FocusPage,
     DiscoveryPage,
     WritePage,
-    AboutPage,
     MsgPage,
     MePage,
     // HomePage,
@@ -31,7 +29,6 @@ import { TabsPage } from '../pages/tabs/tabs';
     FocusPage,
     DiscoveryPage,
     WritePage,
-    AboutPage,
     MsgPage,
     MePage,
     // HomePage,

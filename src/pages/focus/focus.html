@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons start>
-      <button ion-button icon-only color="">
+      <button ion-button icon-only color="" (click)="addFocusTapped($event)">
         <ion-icon name="person-add"></ion-icon>
       </button>
     </ion-buttons>
@@ -15,11 +15,11 @@
   <ion-list>
     <button ion-item>
       <ion-avatar item-left>
-        <img src="/assets/avatar/thsi-group.png" alt="">
+        <img src="/assets/avatar/avatar-ts-woody.png" alt="">
       </ion-avatar>
       <h3>Thsi Group</h3>
     </button>
-    <button ion-item *ngFor="let focus of focusList">
+    <button ion-item *ngFor="let focus of focusList" (click)="oneFocusTappped($event, focus)">
       <ion-avatar item-left>
         <img src="{{focus.avatar}}" alt="">
       </ion-avatar>

@@ -1,5 +1,5 @@
 {
-  "name": "ionic-hello-world",
+  "name": "Thsi-Reader",
   "author": "Ionic Framework",
   "homepage": "http://ionicframework.com/",
   "private": true,
@@ -47,5 +47,5 @@
       "locator": "ios"
     }
   ],
-  "description": "cutePuppyPics: An Ionic project"
+  "description": "ThsiReader: An Ionic project"
 }

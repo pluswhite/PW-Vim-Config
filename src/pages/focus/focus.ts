@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 
+import { NewFocusPage } from '../newFocus/newFoucs';
+
+import { FocusDetailsPage } from '../focusDetails/focusDetails';
+
 @Component({
   selector: 'page-focus',
   templateUrl: './focus.html',
@@ -65,5 +69,15 @@ export class FocusPage {
 
   getFocus () {
 
+  }
+
+  oneFocusTappped (event, focus) {
+    this.navCtrl.push(FocusDetailsPage, {
+      focus: focus
+    })
+  }
+
+  addFocusTapped (event) {
+    this.navCtrl.push(NewFocusPage);
   }
 }

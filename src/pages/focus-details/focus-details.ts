@@ -3,10 +3,11 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
+  moduleId: 'focusDetails',
   selector: 'page-focus-details',
-  templateUrl: 'focusDetails.html',
+  templateUrl: 'focus-details.html',
   styleUrls: [
-    'focusDetails.scss'
+    // 'focusDetails.scss'
   ]
 })
 

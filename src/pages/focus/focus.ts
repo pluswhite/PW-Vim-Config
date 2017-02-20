@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 
-import { NewFocusPage } from '../newFocus/newFoucs';
+import { NewFocusPage } from '../new-focus/new-foucs';
 
-import { FocusDetailsPage } from '../focusDetails/focusDetails';
+import { FocusDetailsPage } from '../focus-details/focus-details';
 
 @Component({
   selector: 'page-focus',

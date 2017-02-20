@@ -4,7 +4,7 @@ import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
   selector: 'page-new-focus',
-  templateUrl: 'newFocus.html'
+  templateUrl: 'new-focus.html'
 })
 
 export class NewFocusPage {

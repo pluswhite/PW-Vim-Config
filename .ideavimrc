@@ -1,0 +1,6 @@
+" Quit insert mode
+inoremap jj <Esc>
+inoremap jk <Esc>
+
+" Yank to the end of line
+nnoremap Y y$

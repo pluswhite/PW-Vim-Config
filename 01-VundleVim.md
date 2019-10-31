@@ -39,7 +39,6 @@ Plugin 'VundleVim/Vundle.vim'
 " Plugin 'user/repo-name'
 Plugin 'dracula/vim'
 
-" 来自 http://vim-scripts.org/vim/scripts.html 的插件
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'plasticboy/vim-markdown'
@@ -47,6 +46,7 @@ Plugin 'scrooloose/nerdtree.git'
 Plugin 'ctrlpvim/ctrlp.vim'
 
 " Plugin '插件名称'
+" 来自 http://vim-scripts.org/vim/scripts.html 的插件
 " 实际上是 Plugin 'vim-scripts/插件仓库名' 只是此处的用户名可以省略
 " Plugin 'plugin-name'
 

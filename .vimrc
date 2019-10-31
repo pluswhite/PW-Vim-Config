@@ -21,8 +21,6 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Github上的插件
 Plugin 'dracula/vim'
-
-" 来自 http://vim-scripts.org/vim/scripts.html 的插件
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'yggdroot/indentline'

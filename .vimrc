@@ -6,6 +6,9 @@ syntax on
 " 设置字体
 set guifont=Monaco\ LG\ S\ Regular\ for\ Powerline:h16
 
+" 设置 leader 键
+let mapleader = "\<space>"
+
 " @vundle 插件管理器
 " 使用 vundle 安装插件
 " 设置包括vundle和初始化相关的runtime path
@@ -27,6 +30,7 @@ Plugin 'yggdroot/indentline'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'easymotion/vim-easymotion'
 
 " 你的所有插件需要在下面这行之前 必须
 call vundle#end()
@@ -68,6 +72,9 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:indentLine_setColors = 0
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
+" @easymotion
+nmap leader leader s <Plug>(easymotion-s2)
+
 "map jj/jk to ESC.
 inoremap jj <c-[>
 inoremap jk <c-[>
@@ -76,5 +83,6 @@ cnoremap <expr> j
 
 inoremap j<Space>     j
 cnoremap j<Space>     j
+
 
 

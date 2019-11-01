@@ -1,13 +1,43 @@
-" 去除VI一致性 必须
-set nocompatible
-" 必须
-filetype on
+须
+filetype plugin on
+" 文件缩进
+filetype indent on
+
+" 设置文件被其他编辑器改动自动加载
+set autoread
+
+" 语法高亮
 syntax on
+
+" 配色主题
+colorscheme dracula
+
+" 显示行号
+set number
+
+" 高亮当前行
+set cursorline
+
 " 设置字体
 set guifont=Monaco\ LG\ S\ Regular\ for\ Powerline:h16
 
 " 设置 leader 键
 let mapleader = "\<space>"
+
+" 快速保存
+nmap <leader>w :w!<cr>
+
+" 搜索时忽略大小写
+set ignorecase
+" 搜索时尝试使用 smartcase
+set smartcase
+" 高亮搜索结果
+set hlsearch
+
+" 允许折叠
+set foldenable
+" 手动折叠
+set foldmethod=manual
 
 " @vundle 插件管理器
 " 使用 vundle 安装插件
@@ -23,7 +53,7 @@ Plugin 'VundleVim/Vundle.vim'
 " 请将安装插件的命令放在vundle#begin和vundle#end之间.
 
 " Github上的插件
-Plugin 'dracula/vim'
+Plugin 'dracula/vim', { 'name': 'dracula' }
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'yggdroot/indentline'
@@ -34,10 +64,6 @@ Plugin 'easymotion/vim-easymotion'
 
 " 你的所有插件需要在下面这行之前 必须
 call vundle#end()
-" 加载vim自带和插件相应的语法和文件类型相关脚本 必须
-filetype plugin indent on
-" 忽视插件改变缩进,可以使用以下替代:
-"filetype plugin on
 
 " 将你自己对非插件片段放在这行之后
 autocmd StdinReadPre * let s:std_in=1
@@ -78,9 +104,6 @@ nmap leader leader s <Plug>(easymotion-s2)
 "map jj/jk to ESC.
 inoremap jj <c-[>
 inoremap jk <c-[>
-cnoremap <expr> j
-      \ getcmdline()[getcmdpos()-2] ==# 'j' ? "\<BS>\<C-c>" : 'j'
-
 inoremap j<Space>     j
 cnoremap j<Space>     j
 

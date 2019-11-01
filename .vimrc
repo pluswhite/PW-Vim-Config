@@ -1,4 +1,4 @@
-须
+" 去除VI一致性 必须
 filetype plugin on
 " 文件缩进
 filetype indent on

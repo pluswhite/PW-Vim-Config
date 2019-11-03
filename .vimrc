@@ -21,6 +21,9 @@ set cursorline
 " 设置字体
 set guifont=Monaco\ LG\ S\ Regular\ for\ Powerline:h16
 
+" 设置左侧滚动条隐藏
+set guioptions-=L 
+
 " 设置 leader 键
 let mapleader = "\<space>"
 

@@ -1,4 +1,7 @@
 " 去除VI一致性 必须
+set nocompatible
+
+" 启动文件类型插件
 filetype plugin on
 " 文件缩进
 filetype indent on
@@ -8,7 +11,6 @@ set autoread
 
 " 语法高亮
 syntax on
-
 " 配色主题
 colorscheme dracula
 
@@ -19,10 +21,7 @@ set number
 set cursorline
 
 " 设置字体
-set guifont=Monaco\ LG\ S\ Regular\ for\ Powerline:h16
-
-" 设置左侧滚动条隐藏
-set guioptions-=L 
+set guifont=Monaco:h16
 
 " 设置 leader 键
 let mapleader = "\<space>"
@@ -38,35 +37,37 @@ set smartcase
 set hlsearch
 
 " 允许折叠
-set foldenable
+" set foldenable
 " 手动折叠
 set foldmethod=manual
 
 " @vundle 插件管理器
 " 使用 vundle 安装插件
 " 设置包括vundle和初始化相关的runtime path
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" 另一种选择, 指定一个vundle安装插件的路径
-"call vundle#begin('~/some/path/here')
+" set rtp+=~/.vim/bundle/Vundle.vim
+" call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-" 让vundle管理插件版本 必须
-Plugin 'VundleVim/Vundle.vim'
-
-" 请将安装插件的命令放在vundle#begin和vundle#end之间.
+" 请将安装插件的命令放在plug#begin和plug#end之间.
 
 " Github上的插件
-Plugin 'dracula/vim', { 'name': 'dracula' }
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'yggdroot/indentline'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'scrooloose/nerdtree.git'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'easymotion/vim-easymotion'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'yggdroot/indentline'
+Plug 'plasticboy/vim-markdown'
+Plug 'scrooloose/nerdtree'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-surround'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'brooth/far.vim'
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " 你的所有插件需要在下面这行之前 必须
-call vundle#end()
+call plug#end()
 
 " 将你自己对非插件片段放在这行之后
 autocmd StdinReadPre * let s:std_in=1
@@ -104,11 +105,10 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 " @easymotion
 nmap leader leader s <Plug>(easymotion-s2)
 
+" @coc.nvim
+
 "map jj/jk to ESC.
 inoremap jj <c-[>
 inoremap jk <c-[>
 inoremap j<Space>     j
 cnoremap j<Space>     j
-
-
-

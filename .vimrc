@@ -112,3 +112,9 @@ inoremap jj <c-[>
 inoremap jk <c-[>
 inoremap j<Space>     j
 cnoremap j<Space>     j
+
+" 映射 ctrl+h/j/k/l 来切换窗口
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l

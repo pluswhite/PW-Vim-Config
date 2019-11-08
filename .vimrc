@@ -39,20 +39,24 @@ set smartcase
 set hlsearch
 
 " 允许折叠
-" set foldenable
-" 手动折叠
-set foldmethod=manual
+set foldenable
+" 设置语法折叠
+set foldmethod=syntax
+" 设置折叠区域的宽度
+set foldcolumn=0
+" 设置折叠层数为
+setlocal foldlevel=1
+" 打开文件是默认不折叠代码
+set foldlevelstart=99
 
-" @vundle 插件管理器
-" 使用 vundle 安装插件
-" 设置包括vundle和初始化相关的runtime path
-" set rtp+=~/.vim/bundle/Vundle.vim
-" call vundle#begin()
+" @插件管理器
+" 使用 vim-plug安装插件
 call plug#begin('~/.vim/plugged')
 
 " 请将安装插件的命令放在plug#begin和plug#end之间.
 
-" Github上的插件
+" 插件列表
+" 来源于Github上的插件
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'

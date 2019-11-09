@@ -1,48 +1,65 @@
 " 去除VI一致性 必须
+" Set compatiable(vi) mode
 set nocompatible
 
 " 启动文件类型插件
+" Set filetype plugin
 filetype plugin on
 " 文件缩进
 filetype indent on
 
 " 设置文件被其他编辑器改动自动加载
+" Auto read when file changed by others
 set autoread
 
 " 语法高亮
+" Syntax highlight
 syntax on
 " 配色主题
+" Set color scheme
 colorscheme dracula
 
 " 显示行号
+" Show line number
 set number
+" Show relative line number
 " 显示相对行号
 set relativenumber
 
 " 高亮当前行
+" Highlight cursor line
 set cursorline
 
 " 设置字体
+" Set font
 set guifont=Monaco:h16
 
 " 设置 leader 键
+" Set leader key
 let mapleader = "\<space>"
 
 " 快速保存
+" map quick write
 nmap <leader>w :w!<cr>
 
 " 搜索时忽略大小写
+" Search ignorecase
 set ignorecase
 " 搜索时尝试使用 smartcase
+" Use smartcase
 set smartcase
+" highlight search results
 " 高亮搜索结果
 set hlsearch
 
 " 允许折叠
+" Allow fold file
 set foldenable
 " 设置语法折叠
+" Set syntax fold
 set foldmethod=syntax
 " 设置折叠区域的宽度
+" Fold column
 set foldcolumn=0
 " 设置折叠层数为
 setlocal foldlevel=1
@@ -50,13 +67,17 @@ setlocal foldlevel=1
 set foldlevelstart=99
 
 " @插件管理器
+" Plugin manager
 " 使用 vim-plug安装插件
+" Use vim-plug to install plugins
 call plug#begin('~/.vim/plugged')
 
 " 请将安装插件的命令放在plug#begin和plug#end之间.
 
 " 插件列表
+" Plugin list
 " 来源于Github上的插件
+" Instll plugins from Github.com
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'

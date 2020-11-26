@@ -1,6 +1,90 @@
-" Quit insert mode
-inoremap jj <Esc>
-inoremap jk <Esc>
+" 去除VI一致性 必须
+" Set compatiable(vi) mode
+set nocompatible
+
+set clipboard+=unnamed
+
+" 启动文件类型插件
+" Set filetype plugin
+filetype plugin on
+" 文件缩进
+filetype indent on
+
+" 设置文件被其他编辑器改动自动加载
+" Auto read when file changed by others
+set autoread
+
+" 语法高亮
+" Syntax highlight
+syntax on
+" 配色主题
+" Set color scheme
+colorscheme dracula
+
+" 显示行号
+" Show line number
+set number
+" Show relative line number
+" 显示相对行号
+set relativenumber
+
+" 高亮当前行
+" Highlight cursor line
+set cursorline
+
+" 设置字体
+" Set font
+set guifont=Monaco:h16
+
+" 设置 leader 键
+" Set leader key
+let mapleader = "\<space>"
+
+" 快速保存
+" map quick write
+nmap <leader>w :w!<cr>
+
+" 搜索时忽略大小写
+" Search ignorecase
+set ignorecase
+" 搜索时尝试使用 smartcase
+" Use smartcase
+set smartcase
+" highlight search results
+" 高亮搜索结果
+set hlsearch
+
+" 允许折叠
+" Allow fold file
+set foldenable
+" 设置语法折叠
+" Set syntax fold
+set foldmethod=syntax
+" 设置折叠区域的宽度
+" Fold column
+set foldcolumn=0
+" 设置折叠层数为
+setlocal foldlevel=1
+" 打开文件是默认不折叠代码
+set foldlevelstart=99
+
+" @easymotion
+nmap leader leader s <Plug>(easymotion-s2)
+
+" @coc.nvim
+
+"map jj/jk to ESC.
+inoremap jj <c-[>
+inoremap jk <c-[>
+inoremap j<Space>     j
+cnoremap j<Space>     j
+
+" 映射 ctrl+h/j/k/l 来切换窗口
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
 
 " Yank to the end of line
 nnoremap Y y$
+set ideajoin
